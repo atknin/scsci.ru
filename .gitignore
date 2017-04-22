@@ -6,3 +6,4 @@ sostrov.sock
 uwsgi_params
 manage.py
 media/secret/
+db.sqlite3
