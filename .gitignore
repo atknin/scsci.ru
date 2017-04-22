@@ -5,5 +5,5 @@ sostrov_uwsgi.ini
 sostrov.sock
 uwsgi_params
 manage.py
-media/secret/
+media/
 db.sqlite3
