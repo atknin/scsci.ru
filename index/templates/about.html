@@ -21,10 +21,20 @@
     		</div>
       </div>
       <div class="col-md-7">
-        {{user.user.first_name}}
+        <div class="row">
+          <div class="col-md-4">
+            <div class="name">'
+      				{{user.user.first_name}} {{user.user.last_name}}
+      			'</div>
+          </div>
+        </div>
+        <div class="row" style="padding:40px;">
+          {{user.paper_short_description}}
+        </div>
+
       </div>
     </div>
-    <br>
+    <hr>
     {%endfor%}
   </body>
 </html>
