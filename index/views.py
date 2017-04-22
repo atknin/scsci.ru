@@ -8,8 +8,10 @@ from index import models as index_models
 from index.email_module import sendEmail
 
 def about(request):
+	argv = {}
+	argv['commands'] = index_models.UserProfile.objects.all()
 	return render(
-	 	request, 'about.html',
+	 	request, 'about.html', argv
 	 	)
 
 def index(request):

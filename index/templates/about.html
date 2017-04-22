@@ -13,16 +13,16 @@
     <div class="main4" style="height: 30px;">
     	<a class="link-home" href="/">&#x2190; scsci.ru</a>
     </div>
-
+    {% for user in commands%}
     <div class="row" style="margin-top:30px;">
       <div class="col-md-4">
-        
+
       </div>
       <div class="col-md-7">
-
+        {{user.user.first_name}}
       </div>
     </div>
     <br>
-
+    {%endfor%}
   </body>
 </html>
