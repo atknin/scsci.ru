@@ -1,0 +1,8 @@
+sostrov/
+sostrov_uwsgi.ini.save
+sostrov_nginx.conf
+sostrov_uwsgi.ini
+sostrov.sock
+uwsgi_params
+manage.py
+media/secret/
