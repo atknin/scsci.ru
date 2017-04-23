@@ -9,6 +9,7 @@ class UserProfile(models.Model):
 	avatar = models.ImageField(upload_to='user_avatars/')
 	paper_title = models.CharField(max_length=200,blank = True, null=True)
 	paper_short_description = models.CharField(max_length=500,blank = True, null=True)
+	birth_day = models.DateField(blank = True, null = True)
 
 	def __unicode__(self):
 		return self.user.username
