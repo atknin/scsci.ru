@@ -439,12 +439,12 @@ filter: blur(4px);*/
 .onvideo {
 	position: absolute;
 	top: 13%;
-	left: 50%;
+	left: 60%;
 }
 .onvideobut {
 	position: absolute;
-	top: 13%;
-	left: 10%;
+	top: 87%;
+	left: 90%;
 }
 .maintext1{
 	color: white;
