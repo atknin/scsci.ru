@@ -13,7 +13,7 @@ class UserProfile(models.Model):
 	files = models.ManyToManyField('index.user_files')
 
 	def __unicode__(self):
-		return self.user.username
+		return return u'{c}/{l}'.format(c=self.user.first_name, l=self.last_name)
 
 	def __str__(self):
 		return self.user.username
