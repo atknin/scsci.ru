@@ -29,4 +29,4 @@ def add_to_db(request):
 		a.save()
 	argv = {}
 	argv['mes'] = index_models.add_to_db.objects.all()
-	return render(request, 'add_to_db.html')
+	return render(request, 'add_to_db.html',argv)
