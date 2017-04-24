@@ -442,8 +442,8 @@ filter: blur(4px);*/
 }
 .onvideobut {
 	position: absolute;
-	top: 20%;
-	left: 14%;
+	top: 0%;
+	left: 98%;
 }
 .maintext1{
 	color: white;
@@ -473,8 +473,8 @@ filter: blur(4px);*/
 	src: url('fonts/stand.otf');
 }
 .onvideobut img{
-	height: 150px;
-	width: 150px;
+	height: 50px;
+	width: 50px;
 	transition-duration: 0.5s;
 }
 .onvideobut img:hover{
