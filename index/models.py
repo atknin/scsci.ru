@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
 	user   = models.ForeignKey(User, unique=True)
-	avatar = models.ImageField(upload_to='user_avatars/')
+	avatar = models.FileField(upload_to='user_avatars/')
 	paper_title = models.CharField(max_length=200,blank = True, null=True)
 	paper_short_description = models.CharField(max_length=800,blank = True, null=True)
 	birth_day = models.DateField(blank = True, null = True)
