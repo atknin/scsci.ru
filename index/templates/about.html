@@ -34,7 +34,15 @@
                 {{user.paper_short_description}}
               </div>
             </div>
+            <div class="mailyou">
+                {{user.user.email}}
+            </div>
+            <a href="mailto:{{user.user.email}}?Subject={{user.user.first_name}} {{user.user.last_name}}" target="_top">
+    					<img src="{% static "index/img/mail_sent.png"%}">
+    				</a>
+            <div class="bl2mail"></div>
           </div>
+
         </div>
 
 
