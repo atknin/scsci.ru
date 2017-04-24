@@ -174,7 +174,8 @@ text-align: left;
 	background-color: #F2F2F2;
 	padding-bottom: 10px;
 	text-align: center;
-	text-decoration-color: #ef0d33;
+	color: #ef0d33;
+	font-size: 17pt;
 }
 .menu a{
 	color: #ef0d33;
@@ -182,14 +183,6 @@ text-align: left;
 }
 .menu a:hover{
 	color: #C61C1C;
-}
-.menu table{
-	margin: auto;
-}
-.menu td{
-	color: #ef0d33;
-	font-size: 17pt;
-	border-right: 4px solid #F2F2F2;
 }
 .bootnews{
 	width: 100%;
