@@ -10,6 +10,7 @@ from index.email_module import sendEmail
 def about(request):
 	argv = {}
 	argv['commands'] = index_models.UserProfile.objects.all()
+	argv['commands_len'] = len(index_models.UserProfile.objects.all())
 	return render(
 	 	request, 'about.html', argv
 	 	)
