@@ -13,10 +13,11 @@ class UserProfile(models.Model):
 	files = models.ManyToManyField('index.user_files')
 
 	def __unicode__(self):
-		return self.user.username
+		return self.paper_title
 
 	def __str__(self):
-		return self.user.username
+		return self.paper_title
+
 	class Meta:
 		verbose_name = 'User'
 		verbose_name_plural = u'Users'
