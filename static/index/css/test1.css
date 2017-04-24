@@ -431,7 +431,8 @@ text-align: center;
 	height: 25px;
 }
 .video{
-width: 100%;
+height: 80%;
+background-color: black;
 /*-webkit-filter: blur(4px);
 filter: blur(4px);*/
 }
