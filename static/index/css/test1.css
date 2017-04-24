@@ -470,7 +470,7 @@ filter: blur(4px);*/
 }
 @font-face{
 	font-family: 'stand';
-	src: url('fonts/GothaProLig.otf');
+	src: url('fonts/stand.otf');
 }
 .onvideobut img{
 	height: 150px;
