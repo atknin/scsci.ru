@@ -28,5 +28,5 @@ def add_to_db(request):
 		a = index_models.add_to_db.objects.create(add_to_db_text=request.POST['message'])
 		a.save()
 	argv = {}
-	argv['mes'] =index_models.add_to_db.objects.all()
+	argv['mes'] = index_models.add_to_db.objects.all()
 	return render(request, 'add_to_db.html')
