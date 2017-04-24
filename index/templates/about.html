@@ -54,7 +54,7 @@
 
         <div class="col-md-2" style="text-align: center;">
             <div class="row">
-              {% for file in user.user_files %}
+              {% for file in user.user_files.all %}
               <a href="{{file.url}}"><span class="glyphicon glyphicon glyphicon-save-file" aria-hidden="true">{{file.name}}</span></a>
               {% endfor %}
             </div>
