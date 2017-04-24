@@ -8,12 +8,12 @@
     <div class="row">
       {% for user in commands%}
       <div class="row" style="padding-top:30px; padding-left:30px;">
-        <div class="col-md-4" style="height:100%">
+        <div class="col-md-3" style="height:100%">
           <div class="avatar">
       			<img src="{{user.avatar.url}}">
       		</div>
         </div>
-        <div class="col-md-7" style="height:100%">
+        <div class="col-md-6" style="height:100%">
           <div class="row">
             <div class="col-md-12" style="padding-top:10px;">
         				<b> {{user.user.first_name}} {{user.user.last_name}}</b> - {{user.paper_title}}
