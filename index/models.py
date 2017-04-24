@@ -8,7 +8,7 @@ class UserProfile(models.Model):
 	user   = models.ForeignKey(User, unique=True)
 	avatar = models.ImageField(upload_to='user_avatars/')
 	paper_title = models.CharField(max_length=200,blank = True, null=True)
-	paper_short_description = models.CharField(max_length=500,blank = True, null=True)
+	paper_short_description = models.CharField(max_length=800,blank = True, null=True)
 	birth_day = models.DateField(blank = True, null = True)
 
 	def __unicode__(self):
@@ -21,9 +21,11 @@ class UserProfile(models.Model):
 		verbose_name_plural = u'Users'
 
 class group(models.Model):
-	name = models.CharField(max_length=30,blank = True, null=True)
-	descript = models.CharField(max_length=200,blank = True, null=True)
-	id = models.AutoField(primary_key=True)
+	name = models.CharField(max_length=30)
+	short_description = models.CharField(max_length=200,blank = True, null=True)
+	user_file = models.ImageField(upload_to='user_files/')
+	user = models.ManyToManyField(UserProfile)
+
 
 	class Meta:
 		verbose_name = u'Группа'
