@@ -11,7 +11,7 @@ class userAdmin(admin.ModelAdmin):
 	list_display = (u'user', )
 
 class userfiles(admin.ModelAdmin):
-	list_display = ('name', u'user' )
+	list_display = ('name', u'short_description' )
 
 admin.site.register(models.UserProfile, userAdmin)
 admin.site.register(models.user_files, userfiles)
