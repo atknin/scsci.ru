@@ -6,6 +6,7 @@ from django.http import JsonResponse
 from django.contrib import auth
 from index import models as index_models
 from index.email_module import sendEmail
+from django.views.decorators.csrf import csrf_exempt
 
 def about(request):
 	argv = {}
@@ -26,5 +27,5 @@ def add_to_db(request):
 	if request.method == "POST":
 		a = index_models.add_to_db.objects.create(add_to_db_text=request.POST['message'])
 		a.save()
-		
+
 	return render(request, 'add_to_db.html')
