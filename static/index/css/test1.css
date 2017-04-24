@@ -165,7 +165,8 @@ body{
 }
 .main1 {
 width: 100%;
-background-color: grey;
+background-color: black;
+text-align: center;
 }
 .menu {
 	padding-top: 10px;
@@ -431,8 +432,7 @@ text-align: center;
 	height: 25px;
 }
 .video{
-height: 80%;
-background-color: black;
+height: 90%;
 /*-webkit-filter: blur(4px);
 filter: blur(4px);*/
 }
