@@ -15,6 +15,10 @@ class doc_admin(admin.ModelAdmin):
 class userAdmin(admin.ModelAdmin):
 	list_display = (u'user', )
 
+class userfiles(admin.ModelAdmin):
+	list_display = ('name', u'user' )
+
 admin.site.register(models.group, group_admin)
 admin.site.register(models.doc, doc_admin)
 admin.site.register(models.UserProfile, userAdmin)
+admin.site.register(models.user_files, userfiles)

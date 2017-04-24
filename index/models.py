@@ -20,7 +20,7 @@ class UserProfile(models.Model):
 		verbose_name = 'User'
 		verbose_name_plural = u'Users'
 
-class group(models.Model):
+class user_files(models.Model):
 	name = models.CharField(max_length=30)
 	short_description = models.CharField(max_length=200,blank = True, null=True)
 	user_file = models.ImageField(upload_to='user_files/')
@@ -28,8 +28,8 @@ class group(models.Model):
 
 
 	class Meta:
-		verbose_name = u'Группа'
-		verbose_name_plural = u'Группы'
+		verbose_name = u'Файл'
+		verbose_name_plural = u'Файлы'
 
 	def __unicode__(self):
 		return self.name.encode('utf-8')
