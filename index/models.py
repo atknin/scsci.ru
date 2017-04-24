@@ -33,7 +33,7 @@ class user_files(models.Model):
 		verbose_name_plural = u'Файлы'
 
 	def __unicode__(self):
-		return self.name.encode('utf-8')
+		return u'{c}/{l}'.format(c=self.name, l=self.short_description)
 
 	def __str__(self):
 		return self.name
