@@ -13,7 +13,12 @@
         </div>
 
         <div class="col-md-6">
-        			<b> {{user.user.first_name}} {{user.user.last_name}}</b> - {{user.paper_title}}
+          <div class="row">
+            <div class="name">
+              {{user.user.first_name}} {{user.user.last_name}}
+              </div>
+             - {{user.paper_title}}
+          </div>
             {{user.paper_short_description}}
         </div>
 
