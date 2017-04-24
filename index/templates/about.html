@@ -58,12 +58,11 @@
             </div>
             <div class="bl1"></div>
           </div>
+          {% for file in user.user_files.all %}
             <div class="row">
-              {% for file in user.user_files.all %}
               <a href="{{file.url}}"><span class="glyphicon glyphicon glyphicon-save-file" aria-hidden="true"></span>{{file.name}}</a> <br>
-              {% endfor %}
             </div>
-
+          {% endfor %}
         </div>
 
       </div>
