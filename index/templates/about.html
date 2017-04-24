@@ -61,12 +61,14 @@
           {% for file in user.user_files.all %}
             <div class="row">
               <br>
-              <div class="col-md-9">
-                  {{file.name}}
-              </div>
               <div class="col-md-3">
                 <a href="{{file.url}}"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
               </div>
+              
+              <div class="col-md-9">
+                  {{file.name}}
+              </div>
+
             </div>
           {% endfor %}
         </div>
