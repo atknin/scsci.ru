@@ -36,30 +36,3 @@ class user_files(models.Model):
 
 	def __str__(self):
 		return self.name
-
-class doc(models.Model):
-	name = models.CharField(max_length=70)
-	descript = models.CharField(max_length=500, blank = True, null=True)
-	# picture =  models.ImageField(upload_to='', blank=True)
-	file = models.FileField(upload_to='', blank=True)
-	group = models.ForeignKey('group',on_delete=models.CASCADE,default=1, verbose_name = 'группа')
-
-	class Meta:
-		verbose_name = u'Документ'
-		verbose_name_plural = u'Документы'
-
-	def __unicode__(self):
-		return self.name.encode('utf-8')
-
-# class news(models.Model):
-# 	name = models.CharField(max_length=70)
-# 	descript = models.CharField(max_length=500, blank = True, null=True)
-# 	picture =  models.ImageField(upload_to='', blank=True)
-# 	file = models.FileField(upload_to='', blank=True)
-
-# 	class Meta:
-# 		verbose_name = u'Новость'
-# 		verbose_name_plural = u'Новости'
-
-# 	def __unicode__(self):
-# 		return self.name.encode('utf-8')
