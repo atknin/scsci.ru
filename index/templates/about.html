@@ -8,10 +8,9 @@
     <div class="row">
       {% for user in commands%}
       <div class="row" style="padding-top:30px; padding-left:30px;">
-        <div class="col-md-3" style="height:100%">
-          <div class="avatar">
+
+        <div class="col-md-3" >
       			<img src="{{user.avatar.url}}">
-      		</div>
         </div>
         <div class="col-md-6">
           <div class="row" style="padding-top:10px;">
@@ -20,7 +19,6 @@
           <div class="row">
             {{user.paper_short_description}}
           </div>
-
         </div>
       </div>
       <hr>
