@@ -10,7 +10,6 @@ class UserProfile(models.Model):
 	paper_title = models.CharField(max_length=200,blank = True, null=True)
 	paper_short_description = models.CharField(max_length=800,blank = True, null=True)
 	birth_day = models.DateField(blank = True, null = True)
-	files = models.ManyToManyField('index.user_files')
 
 	def __unicode__(self):
 		return u'{c}/{l}'.format(c=self.user.first_name, l=self.last_name)
@@ -25,7 +24,7 @@ class user_files(models.Model):
 	name = models.CharField(max_length=30)
 	short_description = models.CharField(max_length=200,blank = True, null=True)
 	user_file = models.FileField(upload_to='user_files/')
-	user = models.ManyToManyField(UserProfile)
+	user = models.ManyToManyField(UserProfile,related_name='user_files')
 
 
 	class Meta:
