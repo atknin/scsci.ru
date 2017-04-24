@@ -60,7 +60,7 @@
           </div>
           {% for file in user.user_files.all %}
             <div class="row">
-              <a href="{{file.url}}"><span class="glyphicon glyphicon glyphicon-save-file" aria-hidden="true"></span>{{file.name}}</a> <br>
+              {{file.name}} <a href="{{file.url}}"><span class="glyphicon glyphicon glyphicon-save-file" aria-hidden="true"></span></a> <br>
             </div>
           {% endfor %}
         </div>
