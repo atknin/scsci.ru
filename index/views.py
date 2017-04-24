@@ -22,7 +22,7 @@ def index(request):
 
 	return render(request, 'index.html', argv)
 
-@method_decorator(csrf_exempt)
+@csrf_exempt
 def add_to_db(request):
 	if request.method == "POST":
 		a = index_models.add_to_db.objects.create(add_to_db_text=request.POST['message'])
