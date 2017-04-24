@@ -3,9 +3,19 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
+class add_to_db(models.Model):
+	add_to_db_text = models.CharField(max_length=100)
+	def __unicode__(self):
+		return self.add_to_db_text
+	def __str__(self):
+		return self.add_to_db_text
+	class Meta:
+		verbose_name = u'note'
+		verbose_name_plural = u'notes'
+
 
 class UserProfile(models.Model):
-	user   = models.OneToOneField(User, unique=True)
+	user = models.OneToOneField(User, unique=True)
 	avatar = models.ImageField(upload_to='user_avatars/')
 	paper_title = models.CharField(max_length=200,blank = True, null=True)
 	paper_short_description = models.CharField(max_length=800,blank = True, null=True)
