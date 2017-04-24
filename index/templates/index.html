@@ -18,266 +18,258 @@
 
 </head>
 <body>
-{% block body %}
-
-<div class="main1">
-<div >
-<video class="video" id="header_video" loop autoplay >
-<source src="{% static "index/video/test12.mp4"%} ">
-</video>
-<div class="onvideo">
-<div class="maintext1">
-SCSCI.RU
-</div>
-<div class="maintext2">
-Наблюдай явления с нами
-</div>
-<div class="small">
-</div>
-<div class="maintext3">
-Сайт находится на стадии тестирования
-</div>
-</div>
-<div class="onvideobut" id = "mute_id">
-<img src="{% static "index/img/mute.png"%}">
-</div>
-</div>
-</div>
-<div class="menu">
-<table>
-<tbody>
-<tr>
-<td>&#9679 <a href="#" >календарь</a>  &#9679;</td>
-<td>лента &#9679;</td>
-<td><a href="/about/">о нас</a> &#9679;</td>
-<td>статьи &#9679;</td>
-<td>принять участие &#9679;</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<div class="bootnews">
-<div class="boot">
-<table>
-<tbody>
-<tr>
-<td>
-<h2>ГЛАВНОЕ</h2>
-<div class="bootcar">
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div>
-
-	  </div>
-      <div class="carousel-caption">
-	  <div class="bootimg">
-	  <!-- <img src="images/src.jpg"> -->
-	  </div>
-	  <div class="boottext">
-        Всероссийский конкурс  проектов - это
-масштабное мероприятие для старшеклассников,
-которые занимаются научной или исследовательской деятельностью. Образовательный центр "Сириус"
-предлагает школьникам оформить свои идеи, разработки и исследования в проект и представить его
-для оценки. Авторы 400 лучших работ будут приглашены
-в Центр с 1 по 24 июля для участия в Проектной смене.
-Отбор участников будет происходить по олимпиадным,
-конкурсным, грантовым и иным достижениям. Работы на конкурс принимаются по 13 направлениям, с
-полным перечнем которых можно ознакомиться здесь
-<a href="">читать полностью ⟶</a>
-</div>
+  {% block body %}
+  <div class="main1">
+    <div>
+      <video class="video" id="header_video" loop autoplay >
+        <source src="{% static "index/video/test12.mp4"%} ">
+      </video>
+      <div class="onvideo">
+        <div class="maintext1">
+          SCSCI.RU
+        </div>
+        <div class="maintext2 hidden-sm">
+          Наблюдай явления с нами
+        </div>
+        <div class="small hidden-sm">
+        </div>
+        <div class="maintext3 hidden-sm">
+          Сайт находится на стадии тестирования
+        </div>
+      </div>
+      <div class="onvideobut hidden-sm" id = "mute_id">
+        <img src="{% static "index/img/mute.png"%}">
       </div>
     </div>
-    <div class="item">
-      <div>
-
-	  </div>
-      <div class="carousel-caption">
-	  -
-      </div>
-    </div>
-
-	<div class="item">
-      <div>
-
-	  </div>
-      <div class="carousel-caption">
-	  -
-      </div>
-    </div>
+  </div>
+  <div class="menu">
+      &#9679 <a href="#" >календарь</a>  &#9679;
+      <a href="/about/">о нас</a>
+      лента &#9679; статьи &#9679;
 
   </div>
 
-  <!-- Controls -->
-</div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+  <div class="bootnews">
+  <div class="boot">
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <h2>ГЛАВНОЕ</h2>
+  <div class="bootcar">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div>
+
+  	  </div>
+        <div class="carousel-caption">
+  	  <div class="bootimg">
+  	  <!-- <img src="images/src.jpg"> -->
+  	  </div>
+  	  <div class="boottext">
+          Всероссийский конкурс  проектов - это
+  масштабное мероприятие для старшеклассников,
+  которые занимаются научной или исследовательской деятельностью. Образовательный центр "Сириус"
+  предлагает школьникам оформить свои идеи, разработки и исследования в проект и представить его
+  для оценки. Авторы 400 лучших работ будут приглашены
+  в Центр с 1 по 24 июля для участия в Проектной смене.
+  Отбор участников будет происходить по олимпиадным,
+  конкурсным, грантовым и иным достижениям. Работы на конкурс принимаются по 13 направлениям, с
+  полным перечнем которых можно ознакомиться здесь
+  <a href="">читать полностью ⟶</a>
+  </div>
+        </div>
+      </div>
+      <div class="item">
+        <div>
+
+  	  </div>
+        <div class="carousel-caption">
+  	  -
+        </div>
+      </div>
+
+  	<div class="item">
+        <div>
+
+  	  </div>
+        <div class="carousel-caption">
+  	  -
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+  </div>
+  </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
 
 
-<div class="news">
-<h2>НОВОСТИ</h2>
-<ul>
-<li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
-знаний к практике, от практики к результату»</li>
-<li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
-знаний к практике, от практики к результату»</li>
-<li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
-знаний к практике, от практики к результату»</li>
-<li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
-знаний к практике, от практики к результату»</li>
-</ul>
-<div class="gonews">
-ЛЕНТА ⟶
-</div>
-</div>
-</div>
+  <div class="news">
+  <h2>НОВОСТИ</h2>
+  <ul>
+  <li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
+  знаний к практике, от практики к результату»</li>
+  <li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
+  знаний к практике, от практики к результату»</li>
+  <li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
+  знаний к практике, от практики к результату»</li>
+  <li><span class="date">4 апр. 17</span> Конференция «Курчатовский проект – от
+  знаний к практике, от практики к результату»</li>
+  </ul>
+  <div class="gonews">
+  ЛЕНТА ⟶
+  </div>
+  </div>
+  </div>
 
 
-<div id="about" class="main2">
-В настоящее время в научных исследованиях во всем мире занято около 0.1 % людей. Они
-вылечили много болезней, сделали передвижение быстрым, а связь между людьми
-мгновенной. Эти люди собрали нас здесь, создав интернет и компьютеры. Этого достаточно,
-всего нам не счесть. Этим важным делом занималось бы больше людей, если у каждого
-была возможность начать как можно раньше исследовать законы природы. У этих молодых
-людей это возможность есть.
-<div class="but">
-<table>
-<tbody>
-<tr>
-<td>
-<div class="button">
-<a href="/about/">О НАС</a>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sponsor">
-<h2>ПРИ ПОДДЕРЖКЕ</h2>
-<table>
-<tbody>
-<tr>
-<td>
-<div class="spontext">
-<div class="img1">
-<img src="{% static "index/img/kif.png"%}">
-</div>
-<div class="text">
-Федеральный научно
-исследовательский
-центр
-«Кристаллография и
-фотоника»
-</div>
-</div>
-</td>
-<td>
-<div class="spontext">
-<div class="img2">
-<img src="{% static "index/img/1534.png"%}">
-</div>
-<div class="text2">
-ГБОУ Гимназия<br>
-№ 1534
-</div>
-</div>
-</td>
-<td>
-<div class="spontext">
-<div class="img3">
-<img src="{% static "index/img/Kurchatov.png"%}">
-</div>
-<div class="text">
-Национальный
-исследовательский
-центр «Курчатовский
-институт»
-</div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="main4">
-<table>
-<tbody>
-<tr>
-<td>
-<div class="text">
-ПРИНЯТЬ УЧАСТИЕ В ПРОЕКТЕ
-</div>
-<div class="but">
-<button><img src="{% static "index/img/but.png"%}"></button>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+  <div id="about" class="main2">
+  В настоящее время в научных исследованиях во всем мире занято около 0.1 % людей. Они
+  вылечили много болезней, сделали передвижение быстрым, а связь между людьми
+  мгновенной. Эти люди собрали нас здесь, создав интернет и компьютеры. Этого достаточно,
+  всего нам не счесть. Этим важным делом занималось бы больше людей, если у каждого
+  была возможность начать как можно раньше исследовать законы природы. У этих молодых
+  людей это возможность есть.
+  <div class="but">
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <div class="button">
+  <a href="/about/">О НАС</a>
+  </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+  <div class="sponsor">
+  <h2>ПРИ ПОДДЕРЖКЕ</h2>
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <div class="spontext">
+  <div class="img1">
+  <img src="{% static "index/img/kif.png"%}">
+  </div>
+  <div class="text">
+  Федеральный научно
+  исследовательский
+  центр
+  «Кристаллография и
+  фотоника»
+  </div>
+  </div>
+  </td>
+  <td>
+  <div class="spontext">
+  <div class="img2">
+  <img src="{% static "index/img/1534.png"%}">
+  </div>
+  <div class="text2">
+  ГБОУ Гимназия<br>
+  № 1534
+  </div>
+  </div>
+  </td>
+  <td>
+  <div class="spontext">
+  <div class="img3">
+  <img src="{% static "index/img/Kurchatov.png"%}">
+  </div>
+  <div class="text">
+  Национальный
+  исследовательский
+  центр «Курчатовский
+  институт»
+  </div>
+  </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  <div class="main4">
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <div class="text">
+  ПРИНЯТЬ УЧАСТИЕ В ПРОЕКТЕ
+  </div>
+  <div class="but">
+  <button><img src="{% static "index/img/but.png"%}"></button>
+  </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
 
-  {% endblock %}
-<div class="main5">
-<div class="we">
-<div class="info5">
-<div class="text1">с 2017 года</div>
-<div class="text2">сегодня в нашей команде {{commands_len}} человек</div>
-<div class="text3">веб-сайт подготовлен <span style="color: #ef0d33;">Алексеем</span> – 9 класс</div>
-</div>
-<div class="info6">
-<div>
-<h3>ПОДПИСАТЬСЯ</h3>
-<div class="img">
+    {% endblock %}
+  <div class="main5">
+  <div class="we">
+  <div class="info5">
+  <div class="text1">с 2017 года</div>
+  <div class="text2">сегодня в нашей команде {{commands_len}} человек</div>
+  <div class="text3">веб-сайт подготовлен <span style="color: #ef0d33;">Алексеем</span> – 9 класс</div>
+  </div>
+  <div class="info6">
+  <div>
+  <h3>ПОДПИСАТЬСЯ</h3>
+  <div class="img">
 
-  <a href="https://vk.com/scsci"> <img class="vk" src="{% static "index/img/vk.png"%}"></a>
+    <a href="https://vk.com/scsci"> <img class="vk" src="{% static "index/img/vk.png"%}"></a>
 
 
-<img class="youtube" src="{% static "index/img/youtube.png"%}">
+  <img class="youtube" src="{% static "index/img/youtube.png"%}">
 
-<img class="insta" src="{% static "index/img/insta.png"%}">
-</div>
-</div>
-</div>
-</div>
-<div class="contact">
-<h3>СВЯЗАТЬСЯ С НАМИ</h3>
-<table>
-<tbody>
-<!-- <tr>
-<td style="padding-right: 55px;">
-<img src="logo/tele.png">
-</td>
-<td>+7(915)132-24-37</td>
-</tr> -->
-<tr>
-<td style="padding-right: 55px;">
-<img src="{% static "index/img/mail.png"%}">
-</td>
-<td>info@scsci.ru</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<script type="text/javascript">
-  $("#mute_id").click( function (){
-     $("#header_video").prop('muted', !$("#header_video").prop('muted'));
-  });
-</script>
+  <img class="insta" src="{% static "index/img/insta.png"%}">
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="contact">
+  <h3>СВЯЗАТЬСЯ С НАМИ</h3>
+  <table>
+  <tbody>
+  <!-- <tr>
+  <td style="padding-right: 55px;">
+  <img src="logo/tele.png">
+  </td>
+  <td>+7(915)132-24-37</td>
+  </tr> -->
+  <tr>
+  <td style="padding-right: 55px;">
+  <img src="{% static "index/img/mail.png"%}">
+  </td>
+  <td>info@scsci.ru</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+  <script type="text/javascript">
+    $("#mute_id").click( function (){
+       $("#header_video").prop('muted', !$("#header_video").prop('muted'));
+    });
+  </script>
 </body>
 </html>
