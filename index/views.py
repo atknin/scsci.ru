@@ -19,5 +19,5 @@ def index(request):
 	argv['commands'] = index_models.UserProfile.objects.all()
 	argv['commands_len'] = len(index_models.UserProfile.objects.all())
  	return render(
-	 	request, 'index.html',argv
-	 	)
+		request, 'index.html',argv
+		)
