@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
 	user   = models.ForeignKey(User, unique=True)
-	avatar = models.FileField(upload_to='user_avatars/')
+	avatar = models.ImageField(upload_to='user_avatars/')
 	paper_title = models.CharField(max_length=200,blank = True, null=True)
 	paper_short_description = models.CharField(max_length=800,blank = True, null=True)
 	birth_day = models.DateField(blank = True, null = True)
@@ -24,7 +24,7 @@ class UserProfile(models.Model):
 class user_files(models.Model):
 	name = models.CharField(max_length=30)
 	short_description = models.CharField(max_length=200,blank = True, null=True)
-	user_file = models.ImageField(upload_to='user_files/')
+	user_file = models.FileField(upload_to='user_files/')
 	user = models.ManyToManyField(UserProfile)
 
 
