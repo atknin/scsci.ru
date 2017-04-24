@@ -20,6 +20,7 @@ while True:
     if start_id < int(a):
         mes = getpost['result'][-1]['message']['text']
         r = requests.post('http://scsci.ru/add_to_db/', data = {'message':mes})
+        start_id = int(a)
         print('posted',r)
     else:
         print('no new message')
