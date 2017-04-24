@@ -22,7 +22,7 @@
 
 <div class="main1">
 <div>
-<video class="video" loop autoplay >
+<video class="video" id="header_video" loop autoplay >
 <source src="{% static "index/video/test12.mp4"%} ">
 </video>
 <div class="onvideo">
@@ -38,7 +38,7 @@ SCSCI.RU
 Сайт находится на стадии тестирования
 </div>
 </div>
-<div class="onvideobut">
+<div class="onvideobut" id = "mute_id">
 <img src="{% static "index/img/play.png"%}">
 </div>
 </div>
@@ -274,5 +274,10 @@ SCSCI.RU
 </table>
 </div>
 </div>
+<script type="text/javascript">
+  $("#mute_id").click( function (){
+     $("#header_video").prop('muted', !$("#header_video").prop('muted'));
+  });
+</script>
 </body>
 </html>
