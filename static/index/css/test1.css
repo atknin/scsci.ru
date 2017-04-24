@@ -166,7 +166,7 @@ body{
 .main1 {
 width: 100%;
 background-color: black;
-text-align: center;
+text-align: left;
 }
 .menu {
 	padding-top: 10px;
@@ -443,7 +443,7 @@ filter: blur(4px);*/
 }
 .onvideobut {
 	position: absolute;
-	top: 87%;
+	top: 77%;
 	left: 90%;
 }
 .maintext1{
