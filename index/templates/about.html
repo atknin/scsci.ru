@@ -16,7 +16,11 @@
       <div class="row" style="padding-top:30px; padding-left:30px;">
 
         <div class="col-md-3" style="text-align: center;">
-      			<img src="{{user.avatar.url}}" height="300">
+          {% if user.avatar %}
+              <img src="{{ user.avatar.url}}" height="300">
+          {% else %}
+            <img src="{% static "about/img/person_unknown.jpg"%}" height="300">
+          {% endif %}
         </div>
 
         <div class="col-md-6">
