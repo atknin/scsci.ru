@@ -8,7 +8,10 @@ from index import models
 
 
 class userAdmin(admin.ModelAdmin):
-	list_display = (u'user', )
+	list_display = (u'user', u'profile_username')
+	def profile_username(self, user):
+		return user.last_name + ' ' +  user.first_name
+    profile_username.short_description = 'FI'
 
 class userfiles(admin.ModelAdmin):
 	list_display = (u'name', u'short_description' )
