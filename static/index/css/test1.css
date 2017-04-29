@@ -552,8 +552,5 @@ filter: blur(4px);*/
 
 }
 .glass-mate{
-	position: absolute;
-  color: rgba(130, 130, 130, 0.5);
-  text-align: center;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+	 background-image: url(http://images.apple.com/home/images/osx_hero_blur.jpg);
 }
