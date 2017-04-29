@@ -552,20 +552,11 @@ filter: blur(4px);*/
 
 }
 .glass-mate{
-  resize: horizontal;
-  overflow: auto;
-  position: relative;
-  width: 25%;
-  height: 100vh;
-  background: linear-gradient($menubg1, $menubg2);
-
-  &::before {
-    z-index: -1;
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    @include background;
-    @include filter(blur($blur));
-  }
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  color: rgba(130, 130, 130, 0.5);
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
