@@ -56,7 +56,9 @@
   <tbody>
   <tr>
   <td>
-  <div class="alert alert-success" role="alert">Дорогие коллеги, здесь будут всегда находиться срочные сообщения</div>
+  {% if sos_message %}
+    <div class="alert alert-success" role="alert">{{sos_message}}</div>
+  {% endif %}
   <h2>ГЛАВНОЕ</h2>
   <div class="bootcar">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

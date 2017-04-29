@@ -12,8 +12,8 @@ class add_to_db(models.Model):
 	def __str__(self):
 		return self.add_to_db_text
 	class Meta:
-		verbose_name = u'note'
-		verbose_name_plural = u'notes'
+		verbose_name = u'Срочное сообщение'
+		verbose_name_plural = u'Срочные сообщение'
 
 
 class UserProfile(models.Model):
