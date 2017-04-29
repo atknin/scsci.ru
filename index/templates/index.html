@@ -64,18 +64,20 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
-      <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles">
-    </div>
+    {%for caro in carousel%}
+      {% if forloop.first %}
+        <div class="item active">
+          <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles">
+        </div>
+      {% else %}
+        <div class="item">
+          <img src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago">
+        </div>
+      {% endif %}
+    {%endfor%}
 
-    <div class="item">
-      <img src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago">
-    </div>
 
-    <div class="item">
-      <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New York">
-    </div>
-  </div>
+
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -87,7 +89,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-{%for caro in carousel%}
+<!-- {%for caro in carousel%}
   {% if forloop.first %}
   <div class="item active">
     <img src="{{ caro.picture.url}}" alt="{{ caro.head }}" style="height:80%">
@@ -99,15 +101,16 @@
   {% else %}
 
   {% endif %}
-<!-- <div class="item">
+  {%endfor%}
+<div class="item">
   <img src="{{ caro.picture.url}}" alt="{{ caro.head }}" height="300" width="300">
   <div class="carousel-caption">
     <h3>{{ caro.head }}<h3>
     <p>{{ caro.short_description }}</p>
   </div>
-</div> -->
 </div>
-{%endfor%}
+</div>
+{%endfor%} -->
     </div>
     <div class="col-md-5">
 
