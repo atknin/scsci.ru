@@ -552,5 +552,5 @@ filter: blur(4px);*/
 
 }
 .glass-mate{
-	 background-image: url(http://images.apple.com/home/images/osx_hero_blur.jpg);
+	 background: rgba(255, 255, 255, 0.5);
 }
