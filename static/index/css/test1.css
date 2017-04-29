@@ -559,15 +559,7 @@ filter: blur(4px);*/
 }
 .arr {
   display: inline-block;
-  padding: 1.2em;
-  box-shadow: 8px 8px 0 2px #777 inset;
-}
-.arr.left {
-  transform: rotate(-45deg);
-}
-.arr.right {
-  transform: rotate(135deg);
 }
 .arr:hover {
-  box-shadow: 8px 8px 0 2px #000 inset
+	background: gray;
 }
