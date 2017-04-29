@@ -10,9 +10,13 @@
 <title>[школа науки]</title>
 {% endblock %}
 <link rel="icon" href="{% static "index/img/icon.png"%}">
+<!-- <link rel="stylesheet" type="text/css"  href="{% static "index/css/test1.css"%}">
+<link rel="stylesheet" type="text/css"  href="{% static "bootstrap/css/bootstrap.css"%}"> -->
 
-<link rel="stylesheet" type="text/css"  href="{% static "bootstrap/css/bootstrap.css"%}">
-<link rel="stylesheet" type="text/css"  href="{% static "index/css/test1.css"%}">
+<style type="text/css">
+  @import url("{% static "bootstrap/css/bootstrap.css"%}");
+  @import url("{% static "index/css/test1.css"%}");
+</style>
 
 <script src="{% static "bootstrap/js/jquery-3.2.1.min.js"%}"></script>
 <script src="{% static "bootstrap/js/bootstrap.min.js"%} "></script>
@@ -51,7 +55,7 @@
       лента &#9679; статьи &#9679;
   </div>
 
-  <div class="row" id='test1'>
+  <div class="row">
     <div class="bootnews">
     <div class="boot">
     <table>
@@ -100,7 +104,7 @@
 
       	  </div>
             <div class="carousel-caption">
-      	  text
+      	  -
             </div>
           </div>
 
@@ -109,7 +113,7 @@
 
       	  </div>
             <div class="carousel-caption">
-      	  text
+      	  -
             </div>
           </div>
 
