@@ -20,7 +20,7 @@ def about(request):
 def index(request):
 	argv = {}
 	argv['commands_len'] = len(index_models.UserProfile.objects.all())
-	argv['carousel'] = index_models.coursel_index_page.objects.all().order_by('-id')[:3]
+	argv['carousel'] = index_models.coursel_index_page.objects.last()
 	try:
 		getpost = requests.get(url='https://api.telegram.org/bot358613549:AAHmzux6VX3_D8RVMpl1WIb5fxxpN_i8tJE/getUpdates').json()
 		mes = getpost['result'][-1]['message']['text']

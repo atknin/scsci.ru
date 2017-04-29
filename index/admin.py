@@ -20,7 +20,7 @@ class add_to_db_admin(admin.ModelAdmin):
 	list_display = (u'add_to_db_text', )
 
 class coursel_index_page_admin(admin.ModelAdmin):
-	list_display = (u'head', u'short_description')
+	list_display = (u'text',)
 
 admin.site.register(models.UserProfile, userAdmin)
 admin.site.register(models.user_files, userfiles)

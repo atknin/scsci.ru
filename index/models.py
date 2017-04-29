@@ -54,16 +54,30 @@ class user_files(models.Model):
 	def __str__(self):
 		return self.name
 
-class coursel_index_page(models.Model):
+
+class coursel_photos(models.Model):
 	head = models.CharField(max_length=30)
 	short_description = models.CharField(max_length=100,blank = True, null=True)
 	picture = models.ImageField(upload_to='coursel_picture/', blank = True)
+
+	class Meta:
+		verbose_name = u'фото для карусели'
+		verbose_name_plural = u'фотографии для карусели'
+
+	def __unicode__(self):
+		return self.head
+	def __str__(self):
+		return self.head
+
+class coursel_index_page(models.Model):
+	text = models.CharField(max_length=600)
+	photos = models.ManyToManyField(coursel_photos)
 
 	class Meta:
 		verbose_name = u'Карусель слайд на главной'
 		verbose_name_plural = u'Карусель слайды на главной'
 
 	def __unicode__(self):
-		return self.head
+		return self.text
 	def __str__(self):
-		return self.head
+		return self.text

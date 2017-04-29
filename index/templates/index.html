@@ -74,7 +74,7 @@
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
-                    {%for caro in carousel%}
+                    {%for caro in carousel.photos.all|slice:":3"%}
                       {% if forloop.first %}
                         <div class="item active">
                           <img src="{{ caro.picture.url}}" alt="{{ caro.head }}">
