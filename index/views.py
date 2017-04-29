@@ -7,6 +7,7 @@ from django.contrib import auth
 from index import models as index_models
 from index.email_module import sendEmail
 from django.views.decorators.csrf import csrf_exempt
+import request
 
 def about(request):
 	argv = {}
