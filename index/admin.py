@@ -22,7 +22,11 @@ class add_to_db_admin(admin.ModelAdmin):
 class coursel_index_page_admin(admin.ModelAdmin):
 	list_display = (u'text',)
 
+class coursel_photos_admin(admin.ModelAdmin):
+	list_display = (u'head', u'short_description')
+
 admin.site.register(models.UserProfile, userAdmin)
 admin.site.register(models.user_files, userfiles)
 admin.site.register(models.add_to_db, add_to_db_admin)
 admin.site.register(models.coursel_index_page, coursel_index_page_admin)
+admin.site.register(models.coursel_photos, coursel_photos_admin)
