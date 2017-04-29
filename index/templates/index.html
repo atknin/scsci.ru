@@ -57,7 +57,7 @@
   <tr>
   <td>
   {% if sos_message %}
-    <div class="alert alert-success" role="alert">{{sos_message}}</div>
+    <div class="alert alert-success" role="alert">{% autoescape off %}{{sos_message}}{% endautoescape %}</div>
   {% endif %}
   <h2>ГЛАВНОЕ</h2>
   <div class="bootcar">
