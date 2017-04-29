@@ -13,7 +13,7 @@ class add_to_db(models.Model):
 		return self.add_to_db_text
 	class Meta:
 		verbose_name = u'Срочное сообщение'
-		verbose_name_plural = u'Срочные сообщение'
+		verbose_name_plural = u'Срочны сообщение'
 
 
 class UserProfile(models.Model):
@@ -53,3 +53,17 @@ class user_files(models.Model):
 
 	def __str__(self):
 		return self.name
+
+class coursel_index_page(models.Model):
+	head = models.CharField(max_length=30)
+	short_description = models.CharField(max_length=100,blank = True, null=True)
+	picture = models.ImageField(upload_to='coursel_picture/', blank = True)
+
+	class Meta:
+		verbose_name = u'Карусель слайд на главной'
+		verbose_name_plural = u'Карусель слайды на главной'
+
+	def __unicode__(self):
+		return self.head
+	def __str__(self):
+		return self.head
