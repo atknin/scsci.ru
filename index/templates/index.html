@@ -67,7 +67,7 @@
     {%for caro in carousel%}
       {% if forloop.first %}
         <div class="item active">
-          <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles">
+          <img src="{{ caro.picture.url}}" alt="Los Angeles">
         </div>
       {% else %}
         <div class="item">
@@ -75,7 +75,7 @@
         </div>
       {% endif %}
     {% endfor %}
-
+<!-- {{ caro.picture.url}}{{ caro.head }}{{ caro.head }}{{ caro.short_description }} -->
 
 
 
