@@ -553,4 +553,6 @@ filter: blur(4px);*/
 }
 .glass-mate{
 	 background: rgba(255, 255, 255, 0.3);
+	 right: -1% !important;
+	 left: -1% !important;
 }
