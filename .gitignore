@@ -7,3 +7,4 @@ uwsgi_params
 manage.py
 media/
 db.sqlite3
+git_push.py
