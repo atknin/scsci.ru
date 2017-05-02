@@ -113,7 +113,7 @@
               <div class="news">
                 <ul>
                   {%for new in news%}
-                    <li><span class="date">{{new.news_date|date:"M d, Y" }}</span> {{new.news}}</li>
+                    <li><span class="date">{{new.news_date }}</span> {{new.news}}</li>
                   {% endfor %}
                 </ul>
                 <div class="gonews">
