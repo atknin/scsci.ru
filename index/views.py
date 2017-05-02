@@ -9,6 +9,9 @@ from index.email_module import sendEmail
 from django.views.decorators.csrf import csrf_exempt
 import requests
 
+from index.alex_functuins import bot1
+
+
 def about(request):
 	argv = {}
 	argv['commands'] = index_models.UserProfile.objects.all()
@@ -21,6 +24,18 @@ def index(request):
 	argv = {}
 	argv['commands_len'] = len(index_models.UserProfile.objects.all())
 	argv['carousel'] = index_models.coursel_index_page.objects.last()
+	if bot1() != False:
+		newid = list(bot1())
+		print('\n \n \t TEST \n \n')
+		print('newid:',newid)
+		h = 0
+		for i in newid[0]:
+			a = index_models.botnews1.objects.create(news=newid[1][h],news_id=newid[0][h],news_date=newid[2][h])
+			a.save()
+			print('\t H:',h)
+			h = h + 1
+
+	argv['news'] = index_models.botnews1.objects.all()
 	try:
 		getpost = requests.get(url='https://api.telegram.org/bot358613549:AAHmzux6VX3_D8RVMpl1WIb5fxxpN_i8tJE/getUpdates').json()
 		mes = getpost['result'][-1]['message']['text']

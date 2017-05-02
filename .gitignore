@@ -8,3 +8,4 @@ manage.py
 media/
 db.sqlite3
 git_push.py
+index/passwords.py

@@ -81,3 +81,15 @@ class coursel_index_page(models.Model):
 		return self.text
 	def __str__(self):
 		return self.text
+
+class botnews1(models.Model):
+	news = models.CharField(max_length=10000)
+	news_id = models.CharField(max_length=1000)
+	news_date = models.CharField(max_length=1000)
+	def __unicode__(self):
+		return self.text
+	def __str__(self):
+		return self.text
+	class Meta:
+		verbose_name = u'новость'
+		verbose_name_plural = u'новости'
