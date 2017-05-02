@@ -209,6 +209,11 @@ text-align: left;
 	font-size: 18pt;
 	color: #ef0d33;
 }
+.gonews a{
+	color: #ef0d33;
+	text-decoration: none;
+}
+
 .main2 {
 	float: left;
 	padding-top: 40px;
