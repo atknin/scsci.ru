@@ -27,7 +27,6 @@ def bot1():
 	if new1[0] != 0:
 		if k != 0:
 			for i in new['test']:
-				print('\t \t P:',p)
 				k1 = 0
 				l = new1[0]
 				while k1 != new1[0]:
