@@ -67,9 +67,9 @@ def bot1():
 			if u in ifyesdate:
 				del ifyesdate[u]
 		ifyes = list(ifyes.values())
-		ifyestext = list(ifyestext.values())
+		ifyestext = list(ifyestext.values().encode('utf-8'))
 		ifyesdate = list(ifyesdate.values())
-		print('\t \t postifyes', ifyes, 'postifyestext', ifyestext.encode('utf-8'),'postifyesdate',ifyesdate)
+		print('\t \t postifyes', ifyes, 'postifyestext', ifyestext,'postifyesdate',ifyesdate)
 		return(ifyes, ifyestext, ifyesdate)
 	else:
 		return(False)
