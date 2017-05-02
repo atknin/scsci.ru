@@ -26,13 +26,10 @@ def index(request):
 	argv['carousel'] = index_models.coursel_index_page.objects.last()
 	if bot1() != False:
 		newid = list(bot1())
-		print('\n \n \t TEST \n \n')
-		print('newid:',newid)
 		h = 0
 		for i in newid[0]:
 			a = index_models.botnews1.objects.create(news=newid[1][h],news_id=newid[0][h],news_date=newid[2][h])
 			a.save()
-			print('\t H:',h)
 			h = h + 1
 
 	argv['news'] = index_models.botnews1.objects.all()
