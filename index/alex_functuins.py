@@ -69,6 +69,7 @@ def bot1():
 		ifyes = list(ifyes.values())
 		ifyestext = list(ifyestext.values())
 		ifyesdate = list(ifyesdate.values())
-		return [ifyes, ifyestext, ifyesdate]
+		lll = [ifyes, ifyestext, ifyesdate]
+		return lll
 	else:
 		return False
