@@ -93,3 +93,17 @@ class botnews1(models.Model):
 	class Meta:
 		verbose_name = u'новость'
 		verbose_name_plural = u'новости'
+
+class Gallary(models.Model):
+	photo_big = models.ImageField(upload_to='gallary/big/', blank = True)
+	photo_small = models.ImageField(upload_to='gallary/small/', blank = True)
+	photo_id = IntegerField(unique=True)
+
+	class Meta:
+		verbose_name = u'фото в Галерею'
+		verbose_name_plural = u'фотки Галереи'
+
+	def __unicode__(self):
+		return self.photo_id
+	def __str__(self):
+		return self.photo_id

@@ -10,6 +10,8 @@ from django.views.decorators.csrf import csrf_exempt
 import requests
 
 from index.alex_functuins import bot1
+from index.updateGalary import updateGalary
+
 
 
 def about(request):
@@ -24,6 +26,7 @@ def index(request):
 	argv = {}
 	argv['commands_len'] = len(index_models.UserProfile.objects.all())
 	argv['carousel'] = index_models.coursel_index_page.objects.last()
+
 	if bot1() != False:
 		newid = list(bot1())
 		h = 0
@@ -40,7 +43,7 @@ def index(request):
 			argv['sos_message'] = mes
 	except Exception as e:
 		pass
-
+	updateGalary()
 	return render(request, 'index.html', argv)
 
 @csrf_exempt
