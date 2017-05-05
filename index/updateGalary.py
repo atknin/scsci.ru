@@ -2,7 +2,9 @@ import vk
 import time
 from index import models
 from urllib.parse import urlparse
+import requests
 import os
+
 def updateGalary():
     token = '311079347:AAFtMNwa4ziqcewP_5cK2d1m3JWulpsmtZg'
     method = 'getUpdates'
