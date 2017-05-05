@@ -1,10 +1,10 @@
 import vk
 import time
 from index import models
-import urllib
 import requests
 import os
 from django.core.files import File
+from django.core.files.temp import NamedTemporaryFile
 
 def updateGalary():
     token = '311079347:AAFtMNwa4ziqcewP_5cK2d1m3JWulpsmtZg'
@@ -27,11 +27,22 @@ def updateGalary():
                 url_small = 'https://api.telegram.org/file/bot{0}/{1}'.format(token, file_small['result']['file_path'])
                 file_big = requests.get(url='https://api.telegram.org/bot{0}/getFile?file_id={1}'.format(token, big)).json()
                 url_big = 'https://api.telegram.org/file/bot{0}/{1}'.format(token, file_big['result']['file_path'])
-                result_small = urllib.urlretrieve(url_small)
-                result_big = urllib.urlretrieve(url_big)
+
+                img_temp_big = NamedTemporaryFile(delete=True)
+                img_temp_big.write(requests.get(url_big).content)
+                img_temp_big.flush()
+
+                img_temp_small = NamedTemporaryFile(delete=True)
+                img_temp_small.write(requests.get(url_small).content)
+                img_temp_small.flush()
+
                 a = models.Gallary(photo_id=int(m_id))
-                a.photo_big.save(os.path.basename(url_big), File(open(result_big[0])))
-                a.photo_small.save(os.path.basename(url_small), File(open(result_small[0])))
+                a.photo_big.save(os.path.basename(url_big), File(img_temp_big))
+                a.photo_small.save(os.path.basename(url_small), File(img_temp_small))
                 a.save()
+
+
+
+
         except Exception as e:
             print(str(e))
