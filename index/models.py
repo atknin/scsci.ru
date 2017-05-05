@@ -104,6 +104,6 @@ class Gallary(models.Model):
 		verbose_name_plural = u'фотки Галереи'
 
 	def __unicode__(self):
-		return self.photo_id
+		return str(self.photo_id)
 	def __str__(self):
-		return self.photo_id
+		return str(self.photo_id)
