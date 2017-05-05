@@ -13,7 +13,7 @@ def updateGalary():
     try:
         updates = getpost['result']
     except Exception as e:
-        pass
+        print(str(e))
 
     for a in updates:
         m_id = a['message']['message_id']
@@ -30,8 +30,8 @@ def updateGalary():
                 result_small = urllib.urlretrieve(url_small)
                 result_big = urllib.urlretrieve(url_big)
                 a = models.Gallary(photo_id=int(m_id))
-                a.photo_big.save(os.path.basename(url_big), File(open(result_big[0]))) 
+                a.photo_big.save(os.path.basename(url_big), File(open(result_big[0])))
                 a.photo_small.save(os.path.basename(url_small), File(open(result_small[0])))
                 a.save()
-        except:
-            pass
+        except Exception as e:
+            print(str(e))
