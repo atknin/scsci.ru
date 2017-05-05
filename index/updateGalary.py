@@ -1,9 +1,10 @@
 import vk
 import time
 from index import models
-from urllib.parse import urlparse
+import urllib
 import requests
 import os
+from django.core.files import File
 
 def updateGalary():
     token = '311079347:AAFtMNwa4ziqcewP_5cK2d1m3JWulpsmtZg'
@@ -19,7 +20,6 @@ def updateGalary():
         try:
             small = a['message']['photo'][1]['file_id']
             big = a['message']['photo'][-1]['file_id']
-            print(small, '\n',big)
             if models.Gallary.objects.filter(photo_id=int(m_id)).exists():
                 pass
             else:
@@ -27,7 +27,11 @@ def updateGalary():
                 url_small = 'https://api.telegram.org/file/bot{0}/{1}'.format(token, file_small['result']['file_path'])
                 file_big = requests.get(url='https://api.telegram.org/bot{0}/getFile?file_id={1}'.format(token, big)).json()
                 url_big = 'https://api.telegram.org/file/bot{0}/{1}'.format(token, file_big['result']['file_path'])
-                models.Gallary.objects.create(photo_big=os.path.basename(urlparse(url_big).path), photo_small=os.path.basename(urlparse(url_small).path), photo_id=int(m_id))
-                print('aded')
+                result_small = urllib.urlretrieve(url_small)
+                result_big = urllib.urlretrieve(url_big)
+                a = models.Gallary(photo_id=int(m_id))
+                a.photo_big.save(os.path.basename(url_big), File(open(result_big[0]))) 
+                a.photo_small.save(os.path.basename(url_small), File(open(result_small[0])))
+                a.save()
         except:
             pass
