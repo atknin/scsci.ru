@@ -44,8 +44,7 @@ def index(request):
 	except Exception as e:
 		pass
 	updateGalary()
-	gal = index_models.Gallary.objects.all()
-	argv['gallary'] = gal[len(gal) - 5):]
+	argv['gallary'] = index_models.Gallary.objects.all().order_by('-id')[:10]
 	return render(request, 'index.html', argv)
 
 @csrf_exempt
