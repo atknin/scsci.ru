@@ -28,9 +28,12 @@ class coursel_photos_admin(admin.ModelAdmin):
 class Gallary_admin(admin.ModelAdmin):
 	list_display = (u'photo_id', )
 
+class botnews1_admin(admin.ModelAdmin):
+	list_display = (u'news_date', u'news')
 admin.site.register(models.UserProfile, userAdmin)
 admin.site.register(models.user_files, userfiles)
 admin.site.register(models.add_to_db, add_to_db_admin)
 admin.site.register(models.coursel_index_page, coursel_index_page_admin)
 admin.site.register(models.coursel_photos, coursel_photos_admin)
 admin.site.register(models.Gallary, Gallary_admin)
+admin.site.register(models.botnews1, botnews1_admin)

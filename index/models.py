@@ -87,9 +87,9 @@ class botnews1(models.Model):
 	news_id = models.CharField(max_length=1000)
 	news_date = models.CharField(max_length=1000)
 	def __unicode__(self):
-		return self.text
+		return self.news
 	def __str__(self):
-		return self.text
+		return self.news
 	class Meta:
 		verbose_name = u'новость'
 		verbose_name_plural = u'новости'
