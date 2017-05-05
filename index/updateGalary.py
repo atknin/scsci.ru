@@ -18,7 +18,7 @@ def updateGalary():
             small = a['message']['photo'][1]['file_id']
             big = a['message']['photo'][-1]['file_id']
             print(small, '\n',big)
-            if models.Gallary.objects.filter(photo_id=this_object_id).exists():
+            if models.Gallary.objects.filter(photo_id=int(m_id)).exists():
                 print('already exist')
             else:
                 print('do not  exist')
