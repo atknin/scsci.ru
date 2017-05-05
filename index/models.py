@@ -97,7 +97,7 @@ class botnews1(models.Model):
 class Gallary(models.Model):
 	photo_big = models.ImageField(upload_to='gallary/big/', blank = True)
 	photo_small = models.ImageField(upload_to='gallary/small/', blank = True)
-	photo_id = IntegerField(unique=True)
+	photo_id = models.IntegerField(unique=True)
 
 	class Meta:
 		verbose_name = u'фото в Галерею'
