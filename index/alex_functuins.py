@@ -57,8 +57,11 @@ def bot1():
 							k2 = 0
 							if 'attachments' in new1[l]:
 								for i in new1[l]['attachments']:
-									ifyespic[k1][k2] = i['photo']['src']
-									k2 = k2 + 1
+									try:
+										ifyespic[k1][k2] = i['photo']['src']
+										k2 = k2 + 1
+									except Exception as e:
+										continue
 								if k2 != 5: #Кол-во картинок
 									while k2 != 5: #Кол-во картинок
 										ifyespic[k1][k2] = ''
