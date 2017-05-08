@@ -83,9 +83,16 @@ class coursel_index_page(models.Model):
 		return self.text
 
 class botnews1(models.Model):
-	news = models.CharField(max_length=10000)
-	news_id = models.CharField(max_length=1000)
-	news_date = models.CharField(max_length=1000)
+	news = models.CharField(max_length=10000,blank=True)
+	news_id = models.CharField(max_length=1000,blank=True)
+	news_date = models.CharField(max_length=1000,blank=True)
+	news_author = models.CharField(max_length=100,blank=True)
+	news_pic = models.CharField(max_length=1000, blank=True)
+	news_pic1 = models.CharField(max_length=1000, blank=True)
+	news_pic2 = models.CharField(max_length=1000, blank=True)
+	news_pic3 = models.CharField(max_length=1000, blank=True)
+	news_pic4 = models.CharField(max_length=1000, blank=True)
+	
 	def __unicode__(self):
 		return self.news
 	def __str__(self):
