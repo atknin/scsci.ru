@@ -113,7 +113,20 @@
               <div class="news" style="width: 100%">
                 <ul>
                   {%for new in news%}
-                    <li><span class="date">{{new.news_date }}</span> {% autoescape off %}{{new.news}}{% endautoescape %}</li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left media-middle">
+                          {% if new.news_pic %}
+                          <a href="#">
+                            <img class="media-object" src="{{new.news_pic.url}}" alt="...">
+                          </a>
+                          {% endif %}
+                        </div>
+                        <div class="media-body">
+                           <span class="date">{{new.news_date }}</span>{% autoescape off %}{{new.news}}{% endautoescape %}
+                        </div>
+                      </div>
+                    </li>
                     <hr>
                   {% endfor %}
                 </ul>
