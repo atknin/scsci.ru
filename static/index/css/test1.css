@@ -213,6 +213,10 @@ text-align: left;
 	color: black;
 	text-decoration: none;
 }
+.gonews a:hover{
+	color: #B80606;
+}
+
 
 .main2 {
 	float: left;
