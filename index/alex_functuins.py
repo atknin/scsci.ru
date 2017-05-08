@@ -10,7 +10,7 @@ def bot1():
 	new = {}
 
 	new['test'] = models.botnews1.objects.all()
-	new1 = vk_api.wall.get(domain='testbotmyag')
+	new1 = vk_api.wall.get(domain='scsci')
 
 	ids = True
 
