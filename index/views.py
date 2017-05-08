@@ -32,7 +32,7 @@ def index(request):
 		newid = list(newid)
 		h = 0
 		for i in newid[0]:
-			a = models.botnews1.objects.create(news=newid[1][h],news_id=newid[0][h],news_date=newid[2][h],news_pic=newid[3][h][0],news_pic1=newid[3][h][1],news_pic2=newid[3][h][2],news_pic3=newid[3][h][3],news_pic4=newid[3][h][4])# news_author=newid[3][h],news_pic=newid[4][h])
+			a = index_models.botnews1.objects.create(news=newid[1][h],news_id=newid[0][h],news_date=newid[2][h],news_pic=newid[3][h][0],news_pic1=newid[3][h][1],news_pic2=newid[3][h][2],news_pic3=newid[3][h][3],news_pic4=newid[3][h][4])# news_author=newid[3][h],news_pic=newid[4][h])
 			a.save()
 			h = h + 1
 	#-----------------------ALEX------------------
