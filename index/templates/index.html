@@ -118,12 +118,12 @@
                         <div class="media-left media-middle">
                           {% if new.news_pic %}
                           <a href="#">
-                            <img class="media-object" src="{{new.news_pic.url}}" alt="...">
+                            <img class="media-object" src="{{new.news_pic}}" alt="...">
                           </a>
                           {% endif %}
                         </div>
                         <div class="media-body">
-                           <span class="date">{{new.news_date }}</span>{% autoescape off %}{{new.news}}{% endautoescape %}
+                           <span class="date">{{new.news_date }} </span>{% autoescape off %}{{new.news}}{% endautoescape %}
                         </div>
                       </div>
                     </li>
