@@ -37,7 +37,7 @@ def index(request):
 			h = h + 1
 	#-----------------------ALEX------------------
 
-	argv['news'] = index_models.botnews1.objects.all()
+	argv['news'] = index_models.botnews1.objects.all().order_by('-id')[:3]
 	try:
 		getpost = requests.get(url='https://api.telegram.org/bot358613549:AAHmzux6VX3_D8RVMpl1WIb5fxxpN_i8tJE/getUpdates').json()
 		mes = getpost['result'][-1]['message']['text']
