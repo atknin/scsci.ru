@@ -215,6 +215,7 @@ text-align: left;
 }
 .gonews a:hover{
 	color: #B80606;
+	text-decoration: none;
 }
 
 
