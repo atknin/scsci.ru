@@ -113,11 +113,11 @@
               <div class="news" style="width: 100%">
                 <ul>
                   {%for new in news%}
+                  <hr>
                     <li>
                       <div class="media" style="padding-right:20px;">
                         <div class="media-left media-middle">
                           {% if new.news_pic %}
-                          <hr>
                           <a href="https://vk.com/scsci">
                             <img class="media-object" src="{{new.news_pic}}" alt="...">
                           </a>
