@@ -4,7 +4,7 @@ from index import models
 from index.passwords import pass_vk
 
 def bot1():
-	session = vk.AuthSession('5943322', '+79151322437', 'pass_vk', scope='wall, messages')
+	session = vk.AuthSession('5943322', '+79151322437', pass_vk, scope='wall, messages')
 	vk_api = vk.API(session)
 
 	new = {}
