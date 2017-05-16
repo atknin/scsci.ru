@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
-
+import datetime
 # Create your models here.
 class add_to_db(models.Model):
 	add_to_db_text = models.CharField(max_length=100)
@@ -92,7 +92,7 @@ class botnews1(models.Model):
 	news_pic2 = models.CharField(max_length=1000, blank=True)
 	news_pic3 = models.CharField(max_length=1000, blank=True)
 	news_pic4 = models.CharField(max_length=1000, blank=True)
-	
+
 	def __unicode__(self):
 		return self.news
 	def __str__(self):
@@ -105,6 +105,7 @@ class Gallary(models.Model):
 	photo_big = models.ImageField(upload_to='gallary/big/', blank = True)
 	photo_small = models.ImageField(upload_to='gallary/small/', blank = True)
 	photo_id = models.IntegerField(unique=True)
+	birth_day = models.DateField(auto_now=True,default=datetime.date.today)
 
 	class Meta:
 		verbose_name = u'фото в Галерею'
