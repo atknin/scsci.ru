@@ -24,6 +24,7 @@ def about(request):
 
 def gallery(request):
 	argv = {}
+	updateGalary()
 	argv['gallary'] = index_models.Gallary.objects.all().order_by('-id')
 	return render(
 	 	request, 'gallery.html', argv
@@ -53,7 +54,6 @@ def index(request):
 			argv['sos_message'] = mes
 	except Exception as e:
 		pass
-	updateGalary()
 	argv['gallary'] = index_models.Gallary.objects.all().order_by('-id')[:12]
 	return render(request, 'index.html', argv)
 
