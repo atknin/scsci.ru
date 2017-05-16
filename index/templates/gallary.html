@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block header %}
+{%load static%}
+{% endblock %}
+
+{% block title %}
+<title>Галерея- scsci.ru</title>
+{% endblock %}
+
+{% block body %}
+    <div class="main4" style="height: 30px; margin-bottom:40px;">
+    	<a class="link-home" href="/">&#x2190; scsci.ru</a>
+    </div>
+
+        {% for photo in gallary%}
+          <div class="col-xs-3 col-md-3">
+            <a href="{{photo.photo_big.url}}" class="thumbnail">
+              <img src="{{photo.photo_small.url}}" alt="...">
+            </a>
+          </div>
+        {% endfor %}
+
+
+
+{% endblock %}

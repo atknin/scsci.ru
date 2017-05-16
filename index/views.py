@@ -22,6 +22,14 @@ def about(request):
 	 	request, 'about.html', argv
 	 	)
 
+def gallery(request):
+	argv = {}
+	argv['gallary'] = index_models.Gallary.objects.all().order_by('-id')
+	return render(
+	 	request, 'gallery.html', argv
+	 	)
+
+
 def index(request):
 	argv = {}
 	argv['commands_len'] = len(index_models.UserProfile.objects.all())
