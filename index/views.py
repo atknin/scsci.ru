@@ -5,6 +5,7 @@ from django.contrib.auth.models import User, Group
 from django.http import JsonResponse
 from django.contrib import auth
 from index import models as index_models
+
 from index.email_module import sendEmail
 from django.views.decorators.csrf import csrf_exempt
 import requests
@@ -12,15 +13,34 @@ import requests
 from index.alex_functuins import bot1
 from index.updateGalary import updateGalary
 
+from django.core.mail import send_mail
+from django.conf import settings
+
 
 
 def compet(request):
 	argv = {}
-	# if request.method == "POST":
-	# 	a = index_models.add_to_db.objects.create(add_to_db_text=request.POST['message'])
-	# 	a.save()
+	if request.method == "POST":
+		argv['post'] = 1
+		try:
+			message = str(request.POST)
+			send_mail(' КОНКУРС', message, settings.EMAIL_HOST_USER, ['ivan@atknin.ru'])
+
+			# a = index_models.compet.objects.create(name =
+			# 									last_name =
+			# 									middle_name =
+			# 									year =
+			# 									email =
+			# 									report =
+			# 									url = )
+			# a.save()
+			argv['status'] = 'ok'
+		except Exception as e:
+			argv['status'] = 'fail'
+
+	argv['get'] = 1
 	return render(
-	 	request, 'compet.html',
+	 	request, 'compet.html', argv
 	 	)
 
 def about(request):

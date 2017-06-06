@@ -125,7 +125,7 @@
           Видео Вам необходимо
          <a href="https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=ru">
            добавить на YouTube</a>, а ссылку на видео поместить в поле "Ссылка". Желаем Удачи!  </p>
-          <form class="form-horizontal" style="margin-top:40px; margin-bottom:20px;">
+          <form action="/compet/" method="post" class="form-horizontal" style="margin-top:40px; margin-bottom:20px;">
             <div class="form-group">
               <label for="inputlastname" class="col-sm-2 control-label">Фамилия</label>
               <div class="col-sm-10">
@@ -145,6 +145,12 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="inputyear" class="col-sm-2 control-label">Класс</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputyear" placeholder="10А">
+              </div>
+            </div>
+            <div class="form-group">
               <label for="inputEmail" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
@@ -160,9 +166,9 @@
             </div>
 
             <div class="form-group">
-              <label for="inputmidlename" class="col-sm-2 control-label">Ссылка</label>
+              <label for="inputlink" class="col-sm-2 control-label">Ссылка</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputmidlename" placeholder="https://www.youtube.com/watch?v=NLhnoIJ5aPk">
+                <input type="text" class="form-control" id="inputlink" placeholder="https://www.youtube.com/watch?v=NLhnoIJ5aPk">
               </div>
             </div>
 
