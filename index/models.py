@@ -8,9 +8,15 @@ class compet(models.Model):
 	name = models.CharField(max_length=60)
 	last_name = models.CharField(max_length=60)
 	middle_name = models.CharField(max_length=60)
+	year = models.CharField(max_length=10)
 	email = models.EmailField(max_length=70)
 	report = models.CharField(max_length=5000, blank = True)
 	url = models.EmailField(max_length=200)
+
+	def __unicode__(self):
+		return self.last_name
+	def __str__(self):
+		return self.last_name
 
 	class Meta:
 		verbose_name = u'УКонкурсант'

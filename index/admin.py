@@ -30,6 +30,11 @@ class Gallary_admin(admin.ModelAdmin):
 
 class botnews1_admin(admin.ModelAdmin):
 	list_display = (u'news_date', u'news')
+
+class compet_admin(admin.ModelAdmin):
+	list_display = (u'last_name', u'year', u'email')
+
+admin.site.register(models.compet, compet_admin)
 admin.site.register(models.UserProfile, userAdmin)
 admin.site.register(models.user_files, userfiles)
 admin.site.register(models.add_to_db, add_to_db_admin)
