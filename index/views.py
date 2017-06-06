@@ -14,6 +14,12 @@ from index.updateGalary import updateGalary
 
 
 
+def compet(request):
+	argv = {}
+	return render(
+	 	request, 'compet.html', 
+	 	)
+
 def about(request):
 	argv = {}
 	argv['commands'] = index_models.UserProfile.objects.all()
