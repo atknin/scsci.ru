@@ -16,8 +16,11 @@ from index.updateGalary import updateGalary
 
 def compet(request):
 	argv = {}
+	# if request.method == "POST":
+	# 	a = index_models.add_to_db.objects.create(add_to_db_text=request.POST['message'])
+	# 	a.save()
 	return render(
-	 	request, 'compet.html', 
+	 	request, 'compet.html',
 	 	)
 
 def about(request):

@@ -4,6 +4,18 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 # Create your models here.
+class compet(models.Model):
+	name = models.CharField(max_length=60)
+	last_name = models.CharField(max_length=60)
+	middle_name = models.CharField(max_length=60)
+	email = models.EmailField(max_length=70)
+	report = models.CharField(max_length=5000, blank = True)
+	url = models.EmailField(max_length=200)
+
+	class Meta:
+		verbose_name = u'УКонкурсант'
+		verbose_name_plural = u'Конкурсанты'
+
 class add_to_db(models.Model):
 	add_to_db_text = models.CharField(max_length=100)
 	def __unicode__(self):
