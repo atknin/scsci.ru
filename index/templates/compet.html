@@ -126,42 +126,41 @@
          <a href="https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=ru">
            добавить на YouTube</a>, а ссылку на видео поместить в поле "Ссылка". Желаем Удачи!  </p>
           <form action="/compet/" method="post" class="form-horizontal" style="margin-top:40px; margin-bottom:20px;">
-            {% csrf_token %} 
+            {% csrf_token %}
             <div class="form-group">
               <label for="inputlastname" class="col-sm-2 control-label">Фамилия</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputlastname" placeholder="Петров">
+                <input type="text" name = "inputlastname" class="form-control" id="inputlastname" placeholder="Петров">
               </div>
             </div>
             <div class="form-group">
               <label for="inputname" class="col-sm-2 control-label">Имя</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputname" placeholder="Владимир">
+                <input type="text" name = "inputname" class="form-control" id="inputname" placeholder="Владимир">
               </div>
             </div>
             <div class="form-group">
               <label for="inputmidlename" class="col-sm-2 control-label">Отчество</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputmidlename" placeholder="Владимирович">
+                <input type="text" name = "inputmidlename"  class="form-control" id="inputmidlename" placeholder="Владимирович">
               </div>
             </div>
             <div class="form-group">
               <label for="inputyear" class="col-sm-2 control-label">Класс</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputyear" placeholder="10А">
+                <input type="text" name = "inputyear" class="form-control" id="inputyear" placeholder="10А">
               </div>
             </div>
             <div class="form-group">
               <label for="inputEmail" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <input type="email" name = "inputEmail"  class="form-control" id="inputEmail" placeholder="Email">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputannotation" class="col-sm-2 control-label">Научный отчет</label>
+              <label for="inputreport" class="col-sm-2 control-label">Научный отчет</label>
               <div class="col-sm-10">
-                <textarea rows="3"
-                placeholder="" id="inputannotation" class="form-control">
+                <textarea rows="3" name = "inputreport" placeholder="" id="inputreport" class="form-control">
                 </textarea>
               </div>
             </div>
@@ -169,7 +168,7 @@
             <div class="form-group">
               <label for="inputlink" class="col-sm-2 control-label">Ссылка</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputlink" placeholder="https://www.youtube.com/watch?v=NLhnoIJ5aPk">
+                <input type="text" name = "inputlink" class="form-control" id="inputlink" placeholder="https://www.youtube.com/watch?v=NLhnoIJ5aPk">
               </div>
             </div>
 
