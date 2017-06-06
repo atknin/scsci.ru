@@ -126,6 +126,7 @@
          <a href="https://support.google.com/youtube/answer/57407?co=GENIE.Platform%3DDesktop&hl=ru">
            добавить на YouTube</a>, а ссылку на видео поместить в поле "Ссылка". Желаем Удачи!  </p>
           <form action="/compet/" method="post" class="form-horizontal" style="margin-top:40px; margin-bottom:20px;">
+            {% csrf_token %} 
             <div class="form-group">
               <label for="inputlastname" class="col-sm-2 control-label">Фамилия</label>
               <div class="col-sm-10">
