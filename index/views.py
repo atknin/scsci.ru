@@ -40,7 +40,10 @@ def compet(request):
 			send_mail(' ЛЕТНИЙ КОНКУРС', message, settings.EMAIL_HOST_USER, [request.POST["inputEmail"]])
 			send_mail(' ЛЕТНИЙ КОНКУРС. ОШИБКА', str(request.POST), settings.EMAIL_HOST_USER, ['ivan@atknin.ru'])
 
-	argv['get'] = 1
+
+	else:
+		argv['get'] = 1
+		
 	return render(
 	 	request, 'compet.html', argv
 	 	)
