@@ -21,7 +21,7 @@ from django.conf import settings
 def compet(request):
 	argv = {}
 	if request.method == "POST":
-		argv['post'] = 1
+
 		try:
 			message = 'Поздравляем Вас, регистрация прошла успешно. \n \n \n С Уважением, Организационный комитет'
 			a = index_models.compet.objects.create(name = request.POST["inputname"],
@@ -32,18 +32,18 @@ def compet(request):
 											report = request.POST["inputreport"],
 											url =  request.POST["inputlink"])
 			a.save()
-			argv['status'] = 'ok'
 			send_mail('ЛЕТНИЙ КОНКУРС', message, settings.EMAIL_HOST_USER, [request.POST["inputEmail"]])
+			argv['post'] = 1
 		except Exception as e:
-			argv['status'] = 'fail'
 			message = 'Возникла ошибка, провер'
 			send_mail(' ЛЕТНИЙ КОНКУРС', message, settings.EMAIL_HOST_USER, [request.POST["inputEmail"]])
 			send_mail(' ЛЕТНИЙ КОНКУРС. ОШИБКА', str(request.POST), settings.EMAIL_HOST_USER, ['ivan@atknin.ru'])
+			argv['post'] = 0
 
 
 	else:
 		argv['get'] = 1
-		
+
 	return render(
 	 	request, 'compet.html', argv
 	 	)

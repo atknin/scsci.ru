@@ -120,6 +120,14 @@
         </div>
         {%if get%}
         <div class="col-md-5 col-sm-12" style="text-align: justify;">
+          {%if post == 0 %}
+          <div class="row" style="margin-bottom:50px;">
+            <div class="alert alert-danger" role="alert">
+            Неудача, проверьте правильность почтового адреса
+          </div>
+
+          </div>
+           {%endif%}
           <h2>Принять участие</h2>
           <p> Для того, чтобы принять участие Вам необходимо заполнить
           форму, после чего Вам придет письмо с подтверждением об участии.
@@ -185,11 +193,13 @@
           Мы будем рады ответить на любые возникшие вопросы:  <a href="mailto:info@scsci.ru?Subject=Вопрос">info@scsci.ru</a>.</p>
        </div>
        {%endif%}
-       {%if post%}
+       {%if post == 1 %}
        <div class="col-md-5 col-sm-12" style="text-align: justify;">
-         POST
+         <div class="alert alert-success" role="alert">Поздравляем, Вы успешно зарегестрировались, на Ваш email
+         отправлена почта</div>
        </div>
         {%endif%}
+
       </div>
     </div>
 
