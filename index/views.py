@@ -23,20 +23,22 @@ def compet(request):
 	if request.method == "POST":
 		argv['post'] = 1
 		try:
-			message = str(request.POST)
-			send_mail(' КОНКУРС', message, settings.EMAIL_HOST_USER, ['ivan@atknin.ru'])
-
-			# a = index_models.compet.objects.create(name =
-			# 									last_name =
-			# 									middle_name =
-			# 									year =
-			# 									email =
-			# 									report =
-			# 									url = )
-			# a.save()
+			message = 'Поздравляем Вас, регистарация прошла успешно. \n С Уважением, Организационный комитет'
+			a = index_models.compet.objects.create(name = request.POST["inputname"],
+											last_name = request.POST["inputlastname"],
+											middle_name = request.POST["inputmidlename"],
+											year = request.POST["inputyear"],
+											email = request.POST["inputEmail"],
+											report = request.POST["inputreport"],
+											url =  request.POST["inputlink"])
+			a.save()
 			argv['status'] = 'ok'
+			send_mail(' КОНКУРС', message, settings.EMAIL_HOST_USER, [request.POST["inputEmail"]])
 		except Exception as e:
 			argv['status'] = 'fail'
+			message = 'Возникла ошибка, провер'
+			send_mail(' КОНКУРС', message, settings.EMAIL_HOST_USER, [request.POST["inputEmail"]])
+			send_mail(' КОНКУРС-ОШИБКА', str(request.POST), settings.EMAIL_HOST_USER, ['ivan@atknin.ru'])
 
 	argv['get'] = 1
 	return render(
