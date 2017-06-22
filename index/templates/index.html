@@ -327,9 +327,17 @@
   </div>
   <script type="text/javascript">
     $("#mute_id").click( function (){
-       $("#header_video").prop('muted', !$("#header_video").prop('muted'));
+      if($("#header_video").paused){
+         $("#header_video").play();
+      }
+      else {
+        $("#header_video").pause();
+      }
+    );
+      //  $("#header_video").prop('muted', !$("#header_video").prop('muted'));
+
     });
-    $("#header_video").prop('muted', !$("#header_video").prop('muted'));
+    // $("#header_video").prop('muted', !$("#header_video").prop('muted'));
   </script>
 </body>
 </html>
