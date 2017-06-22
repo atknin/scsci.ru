@@ -51,7 +51,7 @@
       <noscript><div><img src="https://mc.yandex.ru/watch/44928934" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
       <!-- /Yandex.Metrika counter -->
   {% block body %}
-  <div class="main4" style="height: 5px;">
+  <div class="main4" style="height: 5px; margin-top: 1000px;">
   </div>
   <div class="main1">
     <div class="hidden-xs hidden-sm">
@@ -326,7 +326,10 @@
   </div>
   </div>
   <script type="text/javascript">
+
+    $(".main4").css("margin-top:0px;");
     $("#header_video").fadeIn(3000);
+
     $("#mute_id").click( function (){
     if($("#header_video").get(0).paused){
          $("#header_video").get(0).play();
