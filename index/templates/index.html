@@ -327,10 +327,10 @@
   </div>
   <script type="text/javascript">
     $("#mute_id").click( function (){
-    if($("#header_video").paused){
-         $("#header_video").play();
+    if($("#header_video").get(0).paused){
+         $("#header_video").get(0).play();
     }else{
-       $("#header_video").pause();
+       $("#header_video").get(0).pause();
     };
 
       //  $("#header_video").prop('muted', !$("#header_video").prop('muted'));
